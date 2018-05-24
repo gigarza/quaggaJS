@@ -276,6 +276,12 @@ $(function() {
 
             if (result.codeResult && result.codeResult.code) {
                 Quagga.ImageDebug.drawPath(result.line, {x: 'x', y: 'y'}, drawingCtx, {color: 'red', lineWidth: 3});
+                //$.ajax({url: "addToCart", data: {code: result.codeResult.code}, success: function(result) {
+                  //  if (result) {
+                    //    $(#success).something = true;
+                     //}
+                //create paramaters, which is just code, pass into the backend which will lookup? from the db
+                //grab result.codeResult.code and look into database for appropriate product
             }
         }
     });
@@ -293,5 +299,4 @@ $(function() {
     //         $("#result_strip ul.thumbnails").prepend($node);
     //     }
     // });
-
 });
