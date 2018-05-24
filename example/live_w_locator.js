@@ -210,18 +210,18 @@ $(function() {
             },
             decoder: {
                 readers: function(value) {
-                    // if (value === 'ean_extended') {
-                    //     return [{
-                    //         format: "ean_reader",
-                    //         config: {
-                    //             supplements: [
-                    //                 'ean_5_reader', 'ean_2_reader'
-                    //             ]
-                    //         }
-                    //     }];
-                    // }
+                    if (value === 'ean_extended') {
+                        return [{
+                            format: "ean_reader",
+                            config: {
+                                supplements: [
+                                    'ean_5_reader', 'ean_2_reader'
+                                ]
+                            }
+                        }];
+                    }
                     return [{
-                        format: "upc" + "_reader",
+                        format: value + "_reader",
                         config: {}
                     }];
                 }
