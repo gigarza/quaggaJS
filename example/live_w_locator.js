@@ -206,22 +206,22 @@ $(function() {
                 }
             },
             numOfWorkers: function(value) {
-                return parseInt(value);
+                return 4;
             },
             decoder: {
                 readers: function(value) {
-                    if (value === 'ean_extended') {
-                        return [{
-                            format: "ean_reader",
-                            config: {
-                                supplements: [
-                                    'ean_5_reader', 'ean_2_reader'
-                                ]
-                            }
-                        }];
-                    }
+                    // if (value === 'ean_extended') {
+                    //     return [{
+                    //         format: "ean_reader",
+                    //         config: {
+                    //             supplements: [
+                    //                 'ean_5_reader', 'ean_2_reader'
+                    //             ]
+                    //         }
+                    //     }];
+                    // }
                     return [{
-                        format: value + "_reader",
+                        format: "upc" + "_reader",
                         config: {}
                     }];
                 }
