@@ -239,7 +239,7 @@ $(function() {
             },
             locator: {
                 patchSize: "medium",
-                halfSample: true
+                halfSample: false
             },
             numOfWorkers: 2,
             frequency: 10,
