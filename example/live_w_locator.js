@@ -206,7 +206,7 @@ $(function() {
                 }
             },
             numOfWorkers: function(value) {
-                return 4;
+                return parseInt(value);
             },
             decoder: {
                 readers: function(value) {
