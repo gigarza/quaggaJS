@@ -221,7 +221,7 @@ $(function() {
                         }];
                     }
                     return [{
-                        format: "upc" + "_reader",
+                        format: value + "_reader",
                         config: {}
                     }];
                 }
@@ -245,7 +245,7 @@ $(function() {
             frequency: 10,
             decoder: {
                 readers : [{
-                    format: "upc_reader",
+                    format: "code_128_reader",
                     config: {}
                 }]
             },
